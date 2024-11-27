@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu {
+        width: 30%;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+
+      .menu span {
+        display: block;
+        background: red;
+        height: 20px;
+        width: 100%;
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+      }
+      .menu span:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      .menu:hover span:nth-child(2) {
+        opacity: 0;
+      }
+      .menu:hover span:first-child {
+        transform: rotate(32deg) translate(16px, 48px);
+      }
+      .menu:hover span:last-child {
+        transform: rotate(-32deg) translate(16px, -48px);
+      }
+      .menu:hover span {
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hamebarguer menu animation</h1>
+    <div class="menu"><span></span><span></span><span></span></div>
+    <script></script>
+  </body>
+</html>
