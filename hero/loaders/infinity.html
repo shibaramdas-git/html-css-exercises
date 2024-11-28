@@ -17,46 +17,49 @@
         align-items: center;
         height: 100vh;
       }
-      .infinity-loader {
+      .infinity-wrapper {
         position: relative;
-        height: 40px;
-        width: 80px;
-        border: 1px solid #000;
+        height: 60px;
+        width: 120px;
       }
-      .infinity-loader div {
+      .circle {
         position: absolute;
-        height: 20px;
-        width: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 10px;
+        width: 10px;
         border-radius: 50%;
         background-color: black;
+
         animation: 1.5s infinity infinite ease-in-out;
       }
-      .infinity-loader div:nth-child(2) {
-        animation-delay: 0.2s;
+      .circle:nth-child(2) {
+        animation-delay: 0.3s;
       }
       @keyframes infinity {
         0% {
-          transform: translate(40px, 0);
+          transform: translate(-50%, 0) scale(1);
         }
         25% {
-          transform: translate(70px, 15px);
+          transform: translate(20px, 20px) scale(0.8);
         }
         50% {
-          transform: translate(40px, 30px);
+          transform: translate(0, 40px) scale(1);
         }
         75% {
-          transform: translate(10px, 15px);
+          transform: translate(-20px, 20px) scale(0.8);
         }
         100% {
-          transform: translate(40px, 0);
+          transform: translate(-50%, 0) scale(1);
         }
       }
     </style>
   </head>
   <body>
-    <div class="infinity-loader">
-      <div></div>
-      <div></div>
+    <div class="infinity-wrapper">
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
   </body>
 </html>
